@@ -1,21 +1,21 @@
 import "../global.css";
 import { Inter } from "@next/font/google";
+import { Tillana } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "killdozer.lol",
+    template: "%s | killdozer.lol",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "The official token of the Komatsu D355A bulldozer",
   openGraph: {
-    title: "chronark.com",
-    description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+    title: "killdozer.lol",
+    description: "The official token of the Komatsu D355A bulldozer",
+    url: "https://killdozer.lol",
+    siteName: "killdozer.lol",
     images: [
       {
         url: "https://chronark.com/og.png",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "Komatsu D355A",
     card: "summary_large_image",
   },
   icons: {
@@ -66,8 +66,9 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body
-        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-          }`}
+        className={`bg-black ${
+          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+        }`}
       >
         {children}
       </body>

@@ -8,3 +8,101 @@
   }
 } 
 
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-10px); }
+  20% { transform: translateX(10px); }
+  30% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  50% { transform: translateX(-10px); }
+  60% { transform: translateX(10px); }
+  70% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+  90% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+.shake-animation {
+  animation: shake 1.5s; /* Run the shake animation */
+  animation-iteration-count: infinite; /* Repeat the animation forever */
+}
+
+@keyframes flameSlide {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.flame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn.pixabay.com/animation/2023/04/19/12/15/12-15-36-889_512.gif') repeat-y;
+  background-size: contain;
+  animation: flameSlide 1s ease-out forwards;
+  display: none; /* Hide initially */
+}
+
+
+.ticker-wrap {
+  position: relative;
+  white-space: nowrap;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  animation: slideRight 20s linear infinite;
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 2rem;
+  color: #fff; /* Text color */
+  font-size: 20px; /* Adjust based on your needs */
+  /* Additional styling */
+}
+
+.ticker-image {
+  transform: translateY(25%);
+}
+
+/* Image with shake animation and padding */
+.image-shake-padding {
+  z-index: 10;
+  padding: 1rem 1rem 1rem 0; /* Adjust the padding as per your layout needs */
+}
+
+/* Flame image styling */
+.flame-image {
+  scale: 0.5;
+  z-index: 0;
+  position: absolute;
+  top: 32%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .flame-image {
+    top: 34%;
+    left: 56%;
+    }
+}
