@@ -7,24 +7,15 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "killdozer.lol",
+    default: "chilldev",
     template: "%s | killdozer.lol",
   },
-  description: "The official token of the Komatsu D355A bulldozer",
+  description: "chill dev",
   openGraph: {
-    title: "killdozer.lol",
+    title: "Devbechill",
     description: "The official token of the Komatsu D355A bulldozer",
     url: "https://killdozer.lol",
     siteName: "killdozer.lol",
-    images: [
-      {
-        url: "https://chronark.com/og.png",
-        width: 1920,
-        height: 1080,
-      },
-    ],
-    locale: "en-US",
-    type: "website",
   },
   robots: {
     index: true,
@@ -66,9 +57,8 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body
-        className={`bg-black ${
-          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-        }`}
+        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+          }`}
       >
         {children}
       </body>

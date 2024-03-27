@@ -4,8 +4,10 @@ import React, { useState, useRef, useEffect } from "react";
 import Particles from "./components/particles";
 
 const navigation = [
-  { name: "White Paper", href: "/whitepaper" },
-  { name: "Community", href: "/contact" },
+  { name: "Twitter", href: "https://twitter.com/chilldevsol" },
+  { name: "Dex Screener", href: "https://dexscreener.com/solana/ew8tm8ds5wgfzwcnmh5cc3c47ythbcuxqgvqhy1kqlzw" },
+  { name: "Telegram", href: "https://t.me/+sFk97Gjsvm9kOWIx" },
+  { name: "CA: 3CvRLtZbXCC2YoFbd9PPcYwKL11BXh9BydYJkcfDm51H", href: "" }
 ];
 
 export default function Home() {
@@ -17,6 +19,13 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+      <div className="text-white absolute top-5 left-5">
+        {navigation.map((item) => (
+          <Link key={item.name} href={item.href} className="text-white mx-2 hover:text-zinc-400">
+            {item.name}
+          </Link>
+        ))}
+      </div>
       <div className="ticker-wrap">
         <div className="ticker">
           <div className="ticker-item">SOCIAL EXPERIMENT</div>
